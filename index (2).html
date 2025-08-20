@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>أسامة أبو السندس – مهندس ميكاترونكس ومصمم روبوتات</title>
+  <meta name="description" content="صفحة شخصية مختصرة لأسامة أبو السندس – مهندس ميكاترونكس، مصمم روبوتات، ونائب رئيس IEEE RAS في الجامعة." />
+  <meta property="og:title" content="أسامة أبو السندس – مهندس ميكاترونكس ومصمم روبوتات" />
+  <meta property="og:description" content="أعمالي ومشاريعي في الروبوتات والميكاترونكس." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --brand: #22d3ee;
+      --accent: #60a5fa;
+      --card: #111827;
+      --ring: rgba(96,165,250,.35);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc; --panel:#ffffff; --text:#0f172a; --muted:#475569;
+        --brand:#0891b2; --accent:#2563eb; --card:#ffffff; --ring:rgba(37,99,235,.25);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(96,165,250,.2), transparent),
+                  radial-gradient(800px 400px at -10% 10%, rgba(34,211,238,.18), transparent), var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width:min(1100px, 92%); margin-inline:auto; }
+
+    header {
+      position: sticky; top: 0; z-index: 40; backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--panel) 70%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--muted) 25%, transparent);
+    }
+    nav { display:flex; align-items:center; justify-content:space-between; padding: .9rem 0; }
+    .brand { display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.3px; }
+    .logo { width:34px; height:34px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--brand)); box-shadow: 0 10px 25px -10px var(--ring); }
+    .links { display:flex; gap:1rem; flex-wrap:wrap; }
+    .links a { padding:.45rem .75rem; border-radius:12px; }
+    .links a:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); text-decoration:none; }
+
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:2rem; align-items:center; padding: 3.2rem 0 2.2rem; }
+    .hero h1 { font-size: clamp(28px, 4vw, 44px); margin:0 0 .6rem; line-height:1.2; }
+    .hero p { color: var(--muted); margin: 0 0 1.2rem; }
+    .badges { display:flex; gap:.6rem; flex-wrap:wrap; margin: 1rem 0 1.6rem; }
+    .badge { padding:.35rem .65rem; border-radius:999px; background: color-mix(in srgb, var(--brand) 14%, var(--card)); border:1px solid color-mix(in srgb, var(--brand) 35%, transparent); font-size:.9rem; }
+    .cta { display:flex; gap:.8rem; flex-wrap:wrap; }
+    .btn { display:inline-block; padding:.7rem 1rem; border-radius:14px; font-weight:700; border:1px solid color-mix(in srgb, var(--accent) 45%, transparent); background:linear-gradient(180deg, color-mix(in srgb, var(--accent) 18%, var(--card)), var(--card)); box-shadow: 0 12px 30px -14px var(--ring); }
+    .btn.secondary { background: transparent; border-color: color-mix(in srgb, var(--muted) 35%, transparent); }
+
+    .hero-card { background: color-mix(in srgb, var(--panel) 75%, transparent); border:1px solid color-mix(in srgb, var(--muted) 25%, transparent); border-radius: 24px; padding:1.2rem; box-shadow: 0 20px 40px -20px var(--ring); }
+    .hero-card .stat { display:flex; align-items:center; justify-content:space-between; padding:.75rem .9rem; background: color-mix(in srgb, var(--card) 80%, transparent); border-radius:16px; margin:.6rem 0; }
+    .hero-card .stat small { color: var(--muted); }
+
+    section { padding: 2.5rem 0; }
+    .section-title { font-size: 1.4rem; margin: 0 0 1rem; }
+
+    .grid { display:grid; gap:1rem; }
+    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card { background: color-mix(in srgb, var(--panel) 75%, transparent); border:1px solid color-mix(in srgb, var(--muted) 25%, transparent); border-radius: 20px; padding:1rem; transition: transform .15s ease, box-shadow .15s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -20px var(--ring); }
+    .card h3 { margin:.2rem 0 .4rem; font-size:1.1rem; }
+    .card p { color: var(--muted); margin: 0; }
+
+    .skills { display:flex; flex-wrap:wrap; gap:.6rem; }
+    .chip { background: color-mix(in srgb, var(--accent) 10%, var(--card)); border:1px solid color-mix(in srgb, var(--accent) 35%, transparent); padding:.45rem .65rem; border-radius: 999px; font-weight:600; }
+
+    .contact { display:grid; grid-template-columns: 1.2fr .8fr; gap:1rem; }
+    .contact form { display:grid; gap:.6rem; }
+    input, textarea {
+      width:100%; padding:.8rem 1rem; border-radius:14px; border:1px solid color-mix(in srgb, var(--muted) 25%, transparent); background: color-mix(in srgb, var(--card) 85%, transparent); color:var(--text);
+      outline: none; box-shadow: 0 0 0 0 var(--ring); transition: box-shadow .15s ease;
+    }
+    input:focus, textarea:focus { box-shadow: 0 0 0 4px var(--ring); }
+    textarea { min-height: 120px; resize: vertical; }
+
+    footer { padding:2rem 0; color:var(--muted); text-align:center; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; }
+      .grid.cols-3 { grid-template-columns: 1fr; }
+      .grid.cols-2 { grid-template-columns: 1fr; }
+      nav .links { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><span class="logo">⚡</span> <span>أسامة أبو السندس</span></div>
+        <div class="links">
+          <a href="#about">عنّي</a>
+          <a href="#projects">مشاريع</a>
+          <a href="#skills">مهارات</a>
+          <a href="#contact">تواصل</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>مهندس ميكاترونكس & مصمم روبوتات</h1>
+        <p>
+          شغوف ببناء أنظمة ذكية تجمع بين الميكانيك والإلكترونيات والبرمجة. نائب رئيس
+          <strong>IEEE RAS</strong> في الجامعة. أنجزت العديد من الروبوتات التعليمية وروبوتات المنافسات مثل <strong>RoboFight</strong>، وأسعى لتأسيس براند تصميم روبوتات <strong>Voltoneer</strong>.
+        </p>
+        <div class="badges">
+          <span class="badge">CAD/SOLIDWORKS</span>
+          <span class="badge">Arduino & STM32</span>
+          <span class="badge">تصميم دروع & درم بوت</span>
+          <span class="badge">تحليل اهتزازات</span>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#projects">شاهد المشاريع</a>
+          <a class="btn secondary" href="mailto:hello@example.com">راسلني</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="إحصائيات سريعة">
+        <div class="stat"><small>سنوات خبرة هاوية</small><strong>5+</strong></div>
+        <div class="stat"><small>روبوتات مُنفّذة</small><strong>20+</strong></div>
+        <div class="stat"><small>مجالات</small><strong>ميكانيك • إلكترونيات • تحكم</strong></div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">عنّي</h2>
+      <p>
+        أنا أسامة، أدرس الميكاترونكس وأحب تحويل الأفكار إلى نماذج عملية: من تصميم ميكانيكي مدروس، إلى دوائر إلكترونية نظيفة، إلى برمجة متينة. أؤمن بأن التفاصيل الصغيرة تصنع فرقًا كبيرًا في جودة التجربة.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">مشاريع مختارة</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>Robot "Dera3" – درع الفايت بوت</h3>
+          <p>تصميم CAD لروبوت قتال بسلاح درم، توزيع وزن محسوب وثبات عالٍ لمنافسة وزن 30 كغم.</p>
+          <p><a href="#">رابط المشروع (لاحقًا)</a></p>
+        </article>
+        <article class="card">
+          <h3>Arduino Nano Shield – 12 Servo</h3>
+          <p>شيلد مخصّص للتحكم بسبايدر روبوت، دعم بلوتوث، ألتراسونك، ومنافذ احتياطية.</p>
+          <p><a href="#">ملف الجيربر/الشرح (لاحقًا)</a></p>
+        </article>
+        <article class="card">
+          <h3>Soccer Car Robots</h3>
+          <p>تصميم سيارات روبوتية لمسابقة تعليمية: ميكانيك بسيط، تحكم لاسلكي، وبرمجة مرنة.</p>
+          <p><a href="#">تفاصيل (لاحقًا)</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">مهارات</h2>
+      <div class="skills">
+        <span class="chip">SOLIDWORKS</span>
+        <span class="chip">Fusion 360</span>
+        <span class="chip">EasyEDA</span>
+        <span class="chip">Arduino</span>
+        <span class="chip">STM32</span>
+        <span class="chip">PID Control</span>
+        <span class="chip">3D Printing</span>
+        <span class="chip">C/C++</span>
+        <span class="chip">Python</span>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h2 class="section-title">تواصل</h2>
+        <p>باب التعاون مفتوح لجهات تعليمية وفرق مسابقات ومشاريع تخرج. راسلني عبر البريد أو الشبكات:</p>
+        <ul>
+          <li>البريد: <a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li>إنستغرام: <a href="https://instagram.com/your_handle" target="_blank" rel="noopener">@your_handle</a></li>
+          <li>لينكدإن: <a href="https://linkedin.com/in/your_handle" target="_blank" rel="noopener">linkedin.com/in/your_handle</a></li>
+          <li>جيت هب: <a href="https://github.com/your_handle" target="_blank" rel="noopener">github.com/your_handle</a></li>
+        </ul>
+      </div>
+      <form onsubmit="sendEmail(event)">
+        <label>
+          <span class="sr-only">الاسم</span>
+          <input required name="name" placeholder="اسمك" />
+        </label>
+        <label>
+          <span class="sr-only">البريد</span>
+          <input required type="email" name="email" placeholder="بريدك الإلكتروني" />
+        </label>
+        <label>
+          <span class="sr-only">رسالتك</span>
+          <textarea required name="message" placeholder="رسالتك"></textarea>
+        </label>
+        <button class="btn" type="submit">إرسال</button>
+        <p id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="y"></span> أسامة أبو السندس. صُنِع بالحب ❤.</small>
+    </div>
+  </footer>
+
+  <script>
+    // سنة تلقائية
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // فورم بسيط يفتح البريد الافتراضي برسالة مُهيأة
+    function sendEmail(e){
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const name = fd.get('name');
+      const email = fd.get('email');
+      const message = fd.get('message');
+      const subject = encodeURIComponent('رسالة من الموقع – ' + name);
+      const body = encodeURIComponent(`المرسل: ${name}\nالبريد: ${email}\n\n${message}`);
+      window.location.href = `mailto:hello@example.com?subject=${subject}&body=${body}`;
+      const s = document.getElementById('formStatus');
+      s.textContent = 'تم فتح برنامج البريد لإرسال رسالتك.';
+    }
+
+    // سكرول سلس
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth'});
+        }
+      })
+    });
+  </script>
+</body>
+</html>
